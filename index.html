@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./resources/images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | Article preview component</title>
+    <meta name="description" content="Frontend Mentor | Article preview component">
+
+    <link rel="stylesheet" href="./resources/reset.css">
+    <link rel="stylesheet" href="./resources/style.css">
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+  
+</head>
+<body>
+    <main>
+        <div class="container">
+            <img src="./resources/images/drawers.jpg" alt="Furniture in main page" class="drawers_img">
+            
+            <div class="info">
+                <h1>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
+                <p class="description" id="description">Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.</p>
+                <!--Popup box-->
+                <div class="arrow_box" id="arrow_box">
+                    <div class="popuptext" id="mypopup">
+                        <p class="share">share</p>
+                        <img src="./resources/images/icon-facebook.svg" alt="Facebook icon in main page">
+                        <img src="./resources/images/icon-twitter.svg" alt="Twitter icon in main page">
+                        <img src="./resources/images/icon-pinterest.svg" alt="Pinterest icon in main page">
+                    </div>                    
+                </div>                
+                
+                <!--Box about author-->
+                <div class="author" id="author">                 
+                    <div class="general">
+                        <img src="./resources/images/avatar-michelle.jpg" alt="Avatar to author in main page" class="author_img">
+                        <div class="requisities">
+                            <h2>Michelle Appleton</h2>
+                            <p class="date">28 Jun 2020</p>
+                        </div>
+                    </div>
+                                           
+                    <div class="img_box_share" id="img_box_share">
+                        <img src="./resources/images/icon-share.svg" alt="Share icon in main page" class="share_img" id="share_img">
+                    </div>
+                </div>
+            </div> 
+            <!--Footer box in mobile version-->
+            <div class="footer_mobile">
+                <div class="share_icons">
+                    <p class="share_mobile">share</p>
+                    <img src="./resources/images/icon-facebook.svg" alt="Facebook icon in mobile page">
+                    <img src="./resources/images/icon-twitter.svg" alt="Twitter icon in mobile page">
+                    <img src="./resources/images/icon-pinterest.svg" alt="Pinterest icon in mobile page">
+                </div>
+                
+                <div class="img_box_share_mobile">
+                    <img src="./resources/images/icon-share.svg" alt="Share icon in mobile page" class="share_img_mobile" >
+                </div>                
+            </div>                   
+        </div> 
+    </main>
+
+    <!--Footer section-->
+    <footer class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#" aria-label="Link to author's page">Polina</a>.
+    </footer>
+    <script src="./resources/script.js"></script>
+</body>
+</html>

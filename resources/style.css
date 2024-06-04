@@ -1,0 +1,241 @@
+:root {
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-size: 0.813rem;
+    font-family: "Manrope", sans-serif;
+    background-color: var(--light-grayish-blue);
+    padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100svh;
+    gap: 2rem;
+}
+
+/*Main box*/
+.container {
+    max-width: 50rem;
+    border-radius: 10px;
+    background-color: var(--white);	
+
+    display: flex;
+    box-shadow: 5px 5px 15px var(--grayish-blue);
+}
+
+/*Main image*/
+.drawers_img {
+    width: 45%;
+    border-radius: 10px 0px 0px 10px;
+}
+
+/*Box with information*/
+.info {
+    max-width: 35rem;
+    background-color: var(--white);
+    position: relative;
+    right: 2.5rem;    
+
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/*Box with info about author*/
+.author {
+    display: flex;
+    justify-content: space-between;
+}
+
+.author_img {
+    width: 15%;
+    border-radius: 50px;
+}
+
+/*Share icon-arrow*/
+.img_box_share {
+    background-color: var(--light-grayish-blue);
+    padding: 0.8rem;
+    border-radius: 30px;
+    max-height: 2.5rem;
+}
+
+.general {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: block;
+}
+
+/*Adjusting elements*/
+h1 {
+    font-size: 1.5rem;
+    color: var(--very-dark-grayish-blue);
+}
+
+.description {
+    color: var(--desaturated-dark-blue);
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--very-dark-grayish-blue);
+}
+
+/*p for date in author box*/
+.date {
+    color: var(--grayish-blue);
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+/*Popup box*/
+.arrow_box {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+  /* The actual popup */
+.arrow_box .popuptext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: var(--very-dark-grayish-blue);
+    visibility: hidden;
+    width: 15rem;
+    color: var(--grayish-blue);
+    text-align: center;
+    border-radius: 6px;
+    padding: 0.7rem 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 84%;
+    margin-left: -80px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+}
+  
+/* Popup arrow */
+.arrow_box .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+  
+  /* Toggle this class - hide and show the popup */
+.arrow_box .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+  
+  /* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+  
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+/*Footer in mobile version hidden elements*/
+.share_mobile {
+    display: none;
+}
+
+.img_box_share_mobile {
+    display: none;
+}
+
+
+/*Footer section*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width: 600px){
+    .container {
+        flex-direction: column;
+        box-shadow: none;
+    }
+
+    .info {
+        position: block;
+        right: 0;
+    }
+
+    .drawers_img {
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .author {
+        display: none;
+    }
+
+    /*Footer in mobile version*/
+    .footer_mobile {
+        display: flex;
+        background-color: var(--very-dark-grayish-blue);
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0px 0px 10px 10px;
+        padding: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: var(--grayish-blue);
+        letter-spacing: 0.2rem;
+    }
+    
+    .share_img_mobile {
+        filter: brightness(0) invert(1);
+    }
+    
+    .img_box_share_mobile {
+        background-color: var(--desaturated-dark-blue);
+        padding: 0.5rem;
+        border-radius: 30px;
+        max-height: 2.5rem;
+        display: block;
+    }
+    
+    .share_icons {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .share_mobile {
+        display: block;
+    }
+    
+}
